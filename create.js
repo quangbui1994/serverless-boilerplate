@@ -1,4 +1,4 @@
-import uuid from "uuid";
+// import uuid from "uuid";
 import * as dynamoDbLib from "./libs/dynamodb-lib";
 import { success, failure } from "./libs/response-lib";
 
@@ -8,8 +8,8 @@ export async function main(event, context) {
     TableName: process.env.tableName,
     Item: {
       userId: event.requestContext.identity.cognitoIdentityId,
-      noteId: uuid.v1(),
-      content: data.content,
+      // restaurantId: uuid.v1(),
+      restaurantName: data.restaurantName,
       attachment: data.attachment,
       createdAt: Date.now()
     }
