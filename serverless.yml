@@ -1,4 +1,4 @@
-service: restaurant-app-api
+service: serverless-boilerplate
 
 # Create an optimized package for our functions
 package:
